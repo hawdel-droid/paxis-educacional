@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha área | Práxis Educacional</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard {
+            min-height: 100vh;
+            padding: 35px 7%;
+            background: #fffdf8;
+        }
+
+        .dashboard-topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e3e8ec;
+        }
+
+        .dashboard-boas-vindas {
+            max-width: 700px;
+            margin: 75px auto 45px;
+            text-align: center;
+        }
+
+        .dashboard-boas-vindas h1 {
+            margin: 15px 0;
+            font-family: Georgia, serif;
+            font-size: clamp(30px, 5vw, 46px);
+        }
+
+        .dashboard-boas-vindas p {
+            color: #526477;
+            line-height: 1.8;
+        }
+
+        .dashboard-cartoes {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .dashboard-cartao {
+            padding: 25px;
+            border: 1px solid #e0e8e9;
+            border-radius: 15px;
+            background: white;
+        }
+
+        .dashboard-cartao span {
+            font-size: 30px;
+        }
+
+        .dashboard-cartao h2 {
+            margin: 17px 0 10px;
+            font-size: 18px;
+        }
+
+        .dashboard-cartao p {
+            color: #526477;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .botao-sair {
+            padding: 11px 18px;
+            border: 1px solid #d7e0e7;
+            border-radius: 8px;
+            color: #12365a;
+            background: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 700px) {
+            .dashboard-cartoes {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-boas-vindas {
+                margin-top: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="dashboard">
+        <header class="dashboard-topo">
+            <a href="dashboard.html" class="marca" style="color:#12365a">
+                <span class="simbolo">🌳</span>
+                <span>
+                    <strong>Práxis</strong>
+                    <small>EDUCACIONAL</small>
+                </span>
+            </a>
+
+            <button id="botaoSair" class="botao-sair">
+                Sair da conta ↗
+            </button>
+        </header>
+
+        
+<section class="areas-conhecimento" id="areas">
+
+    <div class="titulo-areas">
+        <span>EXPLORE E APRENDA</span>
+        <h2>Áreas do conhecimento</h2>
+        <p>
+            Escolha uma área e descubra um universo de possibilidades.
+        </p>
+    </div>
+
+    <div class="grade-areas">
+
+        <article class="cartao-area ciencias">
+            <div class="icone-area">⚗️</div>
+            <span class="numero-area">01</span>
+            <h2>Ciências Naturais</h2>
+            <p>
+                Explore a natureza, os seres vivos, a biologia
+                e os fenômenos que explicam o mundo.
+            </p>
+            <span class="link-area">Explorar área <span>→</span></span>
+        </article>
+
+        <article class="cartao-area humanas">
+            <div class="icone-area">🌎</div>
+            <span class="numero-area">02</span>
+            <h2>Ciências Humanas</h2>
+            <p>
+                Conheça a História, a Geografia, as sociedades
+                e as transformações do mundo.
+            </p>
+            <span class="link-area">Explorar área <span>→</span></span>
+        </article>
+
+        <article class="cartao-area educacao">
+            <div class="icone-area">📚</div>
+            <span class="numero-area">03</span>
+            <h2>Educação Organizacional e Didática</h2>
+            <p>
+                Descubra métodos de ensino, organização,
+                planejamento e práticas educativas.
+            </p>
+            <span class="link-area">Explorar área <span>→</span></span>
+        </article>
+
+        <article class="cartao-area cursos">
+            <div class="icone-area">🎓</div>
+            <span class="numero-area">04</span>
+            <h2>Cursos e Pós-Graduação</h2>
+            <p>
+                Encontre oportunidades de formação,
+                especialização e desenvolvimento profissional.
+            </p>
+            <span class="link-area">Explorar área <span>→</span></span>
+        </article>
+
+    </div>
+
+</section>
+
+            <span class="etiqueta" style="color:#087e70">
+                SUA JORNADA DE APRENDIZAGEM
+            </span>
+            <h1>Olá, <span id="nomeUsuario">aluno</span>!</h1>
+            <p>
+                Seja bem-vindo à sua área da Práxis Educacional.
+                Este é o começo de uma jornada de conhecimento,
+                crescimento e novas possibilidades.
+            </p>
+        </section>
+
+        <section class="dashboard-cartoes">
+            <article class="dashboard-cartao">
+                <span>📚</span>
+                <h2>Meus cursos</h2>
+                <p>Aqui ficarão os cursos em que você estiver inscrito.</p>
+            </article>
+
+            <article class="dashboard-cartao">
+                <span>🌱</span>
+                <h2>Meu progresso</h2>
+                <p>Acompanhe sua evolução e continue aprendendo.</p>
+            </article>
+
+            <article class="dashboard-cartao">
+                <span>🏆</span>
+                <h2>Certificados</h2>
+                <p>Futuramente, você poderá consultar seus certificados.</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // Bloqueia a visualização casual sem a sessão de demonstração.
+        if (sessionStorage.getItem("praxisLogado") !== "true") {
+            window.location.replace("index.html");
+        }
+
+        const nome = sessionStorage.getItem("praxisNome");
+
+        if (nome) {
+            document.getElementById("nomeUsuario").textContent = nome;
+        }
+
+        document.getElementById("botaoSair").addEventListener("click", () => {
+            sessionStorage.removeItem("praxisLogado");
+            sessionStorage.removeItem("praxisNome");
+            window.location.replace("index.html");
+        });
+    </script>
+</body>
+</html>
